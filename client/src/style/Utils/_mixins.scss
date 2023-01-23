@@ -1,0 +1,65 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content
+    }
+};
+@mixin mobile-tablet{
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content
+    }
+};
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, tablet)) {
+        @content
+    }
+};
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop)) {
+        @content
+    }
+};
+@mixin tablet-desktop {
+    @media screen and (min-width: map-get($breakpoints, mobile)) {
+        @content
+    }
+};
+
+@mixin distribute-on-circle(
+    $nb-items,
+    $circle-size,
+    $item-size,
+){
+    $half-item: (calc($item-size / 2));
+    $half-parent: (calc($circle-size / 2));
+
+    position: relative; //to apply position absolute to children
+    width: $circle-size;
+    height: $circle-size;
+    padding: 0;
+    border-radius: 50%;
+    list-style: none;
+    box-sizing: content-box;
+    z-index: 3;
+
+    //target any type of direct children
+    > * {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width:  $item-size;
+        height: $item-size;
+        margin: -$half-item;
+    }
+
+    $angle: (calc(360 / $nb-items));
+    $rot: -90;
+
+    @for $i from 1 through $nb-items {
+        > :nth-of-type(#{$i}) {
+            transform: rotate($rot * 1deg) translate($half-parent) rotate($rot * -1deg);
+          }
+
+          $rot: ($rot + $angle);
+    }
+}

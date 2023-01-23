@@ -1,0 +1,127 @@
+header {
+    padding: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $color-secondary-lighter;
+    margin-bottom: 1rem;
+    @include mobile-tablet () {
+        padding: 0 1em;
+    }
+    .title {
+        @include mobile-tablet () {
+            font-size: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    nav {
+        width: 40%;
+        display: flex;
+        align-items: flex-start;
+        @include mobile-tablet () {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    .hover-classes-menu{
+        display: flex;
+                flex-direction: column;
+                background-color: $color-secondary-lighter;
+                padding: 1em;
+                li {
+                    padding: .2em 0;
+                }
+    }
+    .hover-classes{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu {
+        padding: .5rem;
+        cursor: pointer;
+        display: none;
+        @include mobile-tablet() {
+            display: block;
+            box-shadow: none;
+        }
+    }
+    .fa-menu {
+        display: none;
+        @include mobile-tablet() {
+            font-size: 1.5rem;
+            display: block;
+            color: $color-primary;
+        }
+    }
+    
+    .navigation-menu.expanded {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: .5rem .5rem 1rem .5rem;
+        li {
+            padding-top: .8rem;
+        }
+    }
+    .navigation-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include mobile-tablet() {
+                display: none;
+        }
+        a, .link {
+            position: relative;
+            z-index: 1;
+            @include mobile-tablet() {
+                font-size: 1.3rem;
+            }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -0.5rem;
+                    left: 0;
+                    right: 0;
+                    height: .5rem;
+                    opacity: 0;
+                    background: $color-tertiary;
+                    z-index: -1;
+                }
+                &:hover {
+                        color: $color-primary;
+                    &::after{
+                        animation: progress-bar 200ms ease-in-out;
+                        opacity: 1;
+                    } 
+                }
+        }
+        .active-link {
+            color: $color-tertiary;
+            cursor: default;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -0.1em;
+                left: 0;
+                right: 0;
+                opacity: 1;
+                height: .1rem;
+                width: 100%;
+                background: $color-primary;
+                transform: skew(-8deg);
+            }
+        }
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

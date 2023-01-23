@@ -1,0 +1,23 @@
+$color-primary: rgb(85, 80, 93);
+$color-secondary: rgb(251, 213, 198);
+// $color-tertiary: rgb(254, 244, 238);
+$color-tertiary: rgb(216, 120, 92);
+$color-quaternary: rgb(192, 167, 155);
+$color-primary-darker: darken($color-primary, 20%);
+$color-secondary-transparent: rgba(251, 213, 198, 0.7);
+$color-tertiary-transparent: rgba(216, 120, 92, 0.7);
+$color-secondary-lighter: lighten($color-secondary, 5%);
+$color-tertiary-lighter-transparent: lighten($color-tertiary-transparent, 10%);
+$dark: rgb(41, 35, 30);
+$dark-transparent: rgb(41, 35, 30, 0.7);
+
+// $color-primary: rgb(192, 167, 155);
+// $color-secondary: rgb(251, 213, 198);
+// // $color-tertiary: rgb(254, 244, 238);
+// $color-tertiary: rgb(216, 120, 92);
+
+$breakpoints: (
+    mobile: 480px,
+    tablet: 768px,
+    desktop: 992px
+);
