@@ -1,20 +1,15 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
-    const [isNavExpanded, setIsNavExpanded] = useState(false);
+const Footer = () => {
     const [isSubMenuExpanded, setIsSubMenuExpanded] = useState(false);
-        
     return ( 
-        <header>
-        <div className="allcaps title">ATC - Atelier Terre de Carbonne</div>
-        <nav>
-            <button className="menu" onClick={() => {setIsNavExpanded(!isNavExpanded)}} aria-label="Menu Button">
-                <FontAwesomeIcon icon={faBars} className="fa fa-menu" />
-            </button>
-            <ul className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}>
+        <footer>
+            <div id="footer-top">
+            <ul className="footer-navigation-menu">
                 <li>
                 <NavLink 
                     to="/" 
@@ -25,8 +20,7 @@ const Header = () => {
                 </li>
                 <li className="hover-classes">
                 <button  
-                    onMouseEnter={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
-                    // onMouseOut={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
+                    onClick={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
                     className="link"
                 > 
                         Cours
@@ -75,8 +69,30 @@ const Header = () => {
                 </NavLink>
                 </li>
             </ul>
-        </nav>
-     </header>
+            </div>
+        <div id="footer-middle">
+            <h2 className="footer-title">Nous Contacter</h2>
+            <ul className="contact">
+            <li>
+                <FontAwesomeIcon icon={faLocationDot} className="fa fa-location" />
+                <p>
+                                Atelier Terre <br />
+                                31390 Carbonne 
+                </p>
+            </li>
+            <div className="contact-divider"></div>
+            <li>
+                <FontAwesomeIcon icon={faEnvelope} className="fa fa-envelope" />
+                <a href="mailto:atelier.terre.carbonne22@gmail.com">atelier.terre.carbonne22@gmail.com</a>
+            </li>
+            </ul>
+      </div>
+            <div id='footer-bottom'>  
+                <p>Copyright © 2023 Atelier Terre de Carbonne | Tous droits réservés | <NavLink to="/mentions-legales"> Mentions légales</NavLink></p>
+                <p>Site web créé et développé par <a href="https://www.camilleherpin.com" target="_blank" rel="noreferrer">Camille Herpin</a></p>    
+            </div>
+        </footer>
      );
 }
-export default Header;
+ 
+export default Footer;

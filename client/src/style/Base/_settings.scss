@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   margin: 0 auto;
   font-size: 1em;
+  background-color: $color-secondary-very-light;
 }
 
 li {
@@ -23,6 +24,31 @@ a, .link {
   text-decoration: none;
   cursor: pointer;
 }
+a, .link {
+    position: relative;
+    z-index: 1;
+    @include mobile-tablet() {
+        font-size: 1.3rem;
+    }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            right: 0;
+            height: .5rem;
+            opacity: 0;
+            background: $color-tertiary;
+            z-index: -1;
+        }
+        &:hover {
+                color: $color-primary;
+            &::after{
+                animation: progress-bar 200ms ease-in-out;
+                opacity: 1;
+            } 
+        }
+}
 
 a:visited {
   text-decoration: none;
@@ -33,6 +59,36 @@ h1, .title {
   font-family: "Bubbler One", Helvetica, sans-serif;
   font-size: 42px;
   color: $color-primary-darker;
+  display: inline;
+  padding: .2em 0;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: .2rem;
+    width: 2.5em;
+    opacity: 1;
+    background: $color-tertiary;
+    z-index: -1;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: .2rem;
+    width: 2.5em;
+    opacity: 1;
+    background: $color-tertiary;
+    z-index: -1;
+  }
+}
+
+h2 {
+    margin-top: 1em;
 }
 
 .hidden {
