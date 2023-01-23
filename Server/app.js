@@ -8,9 +8,13 @@ const helmet = require('helmet');
 require('dotenv').config({path: './config/.env'})
 require('./config/db');
 
+
+
 //Routes files
 const userRoutes = require('./routes/user');
 const postRoutes = require('./routes/post');
+const { default: mongoose } = require('mongoose');
+mongoose.set('strictQuery', true);
 
 //Uses the default Helmet options and adds the `crossOriginResourcePolicy` middleware that allows images
 app.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
