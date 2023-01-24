@@ -1,0 +1,35 @@
+.carousel {
+    width: 100%;
+    display: flex;
+    position: relative;
+    button {
+        background-color: $color-tertiary;
+        border-radius: 50%;
+        border: none;
+        padding: 1em;
+        z-index: 4;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-quaternary;
+        }
+    }
+    .arrow-left {
+        position: absolute;
+        left: -3em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .arrow-right {
+        position: absolute;
+        right: -3em;;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .hidden {
+        display: none;
+    }
+    .carousel-image{
+        margin: auto;
+        z-index: 1;
+    }
+}

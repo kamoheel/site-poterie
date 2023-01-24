@@ -1,14 +1,15 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-    const [isSubMenuExpanded, setIsSubMenuExpanded] = useState(false);
+    // const [isSubMenuExpanded, setIsSubMenuExpanded] = useState(false);
+    
     return ( 
         <footer>
-            <div id="footer-top">
+            {/* <div id="footer-top">
             <ul className="footer-navigation-menu">
                 <li>
                 <NavLink 
@@ -69,7 +70,7 @@ const Footer = () => {
                 </NavLink>
                 </li>
             </ul>
-            </div>
+            </div> */}
         <div id="footer-middle">
             <h2 className="footer-title">Nous Contacter</h2>
             <ul className="contact">
