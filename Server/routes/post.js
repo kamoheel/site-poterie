@@ -8,7 +8,7 @@ const postCtrl = require('../controllers/post');
 //save posts to database
 router.post('/', requireAuth, multer, postCtrl.createPost);
 //get list of posts
-router.get('/', requireAuth, postCtrl.getAllPosts);
+router.get('/', postCtrl.getAllPosts);
 //get one specific post
 //router.get('/:id', auth, postCtrl.getOnePost);
 //Modify a post

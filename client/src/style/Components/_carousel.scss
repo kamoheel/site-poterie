@@ -1,7 +1,13 @@
 .carousel {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
+    border: .1em solid $color-secondary;
+    border-radius: 1em;
+    padding: 1em;
     button {
         background-color: $color-tertiary;
         border-radius: 50%;
@@ -31,5 +37,16 @@
     .carousel-image{
         margin: auto;
         z-index: 1;
+    }
+    .carousel-content {
+        display: flex;
+        .carousel-text{
+            display: flex;
+            flex-direction: column;
+            padding: .5em;
+        }
+    }
+    .carousel-footer {
+        font-size: .8em;
     }
 }

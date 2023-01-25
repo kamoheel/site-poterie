@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import React, { useState, useCallback, useEffect } from 'react';
+import axios from 'axios';
 import PotsBundle from "../assets/bundle.png";
 import AdultPot from "../assets/adulte.png";
 import TeenPot from "../assets/ados.png";
@@ -6,6 +8,29 @@ import KidPot from "../assets/enfants.png";
 import Carousel from "../components/carousel";
 
 const Home = () => {
+    const [allPosts, setAllPosts] = useState([]);
+
+    const fetchAllPosts = useCallback(
+        () => {
+            axios({
+                method: "GET",
+                url: `${process.env.REACT_APP_API_URL}api/posts`,
+                withCredentials: true,
+              })
+                .then((res) => {
+                  setAllPosts(res.data);
+                })
+                .catch((err) => {
+                  console.log(err);
+                }
+                );
+            }, [],
+    );
+
+    useEffect(()=>{
+        fetchAllPosts();
+    }, [fetchAllPosts])
+
     return ( 
     <section id="home">
         <h1>ATC - Cours de poterie à Carbonne</h1>
@@ -41,10 +66,9 @@ const Home = () => {
             <img src={PotsBundle} alt="Groupe de pots dessinés" />
             
         </div>
-        <div id="home-presentation">
+        <div id="home-blog">
             <h2>Dernières actus de l'Atelier Terre</h2>
-            {/* aller chercher posts */}
-            {/* <Carousel images={images} altText="Actu" text="Le texte" /> */}
+            <Carousel allPosts={allPosts} />
         </div>
     </section> 
     );

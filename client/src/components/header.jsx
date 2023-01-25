@@ -34,7 +34,7 @@ const Header = () => {
                         <ul className={isSubMenuExpanded ? "hover-classes-menu" : "hidden"}>
                             <li>
                             <NavLink 
-                            to="/cours-adultes" 
+                            to="/cours-de-poterie-ceramique-adultes" 
                             className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
                             >
                                 Adultes
@@ -42,7 +42,7 @@ const Header = () => {
                             </li>
                             <li>
                             <NavLink 
-                            to="/cours-ados" 
+                            to="/cours-de-poterie-ceramique-adolescents" 
                             className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
                             >
                                 Ados
@@ -50,7 +50,7 @@ const Header = () => {
                             </li>
                             <li>
                             <NavLink 
-                            to="/cours-enfants" 
+                            to="/cours-de-poterie-ceramique-enfants" 
                             className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
                             >
                                 Enfants
@@ -60,7 +60,7 @@ const Header = () => {
                 </li>
                 <li>
                 <NavLink 
-                    to="/actus"
+                    to="/actus-atc"
                     className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
                 >
                     Actualités

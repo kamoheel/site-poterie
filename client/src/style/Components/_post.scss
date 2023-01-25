@@ -1,0 +1,15 @@
+.post{
+    width: 80%;
+    margin:auto;
+    border: .1em solid $color-secondary;
+    border-radius: .5em;
+    padding: 1em;
+    .post-footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img {
+            width: 3%;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.classes-container{
+    display: flex;
+}
+.hours{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+}
+
+.prices {
+    table{
+        border: .1em solid $color-primary;
+        border-collapse: collapse;
+        td{
+            border: .1em solid $color-primary;
+            padding: .2em;
+        }
+    }
+}
