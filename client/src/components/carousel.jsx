@@ -29,20 +29,20 @@ const Carousel = ( {allPosts} ) => {
            
           {allPosts.map((post)=> {
             return (
-              <div>
-              <div className="carousel-content">  
-              {allPosts[index].imageUrl && ( 
-                <img src={allPosts[index].imageUrl} alt={allPosts[index].title} className="carousel-image"/>
-                )
-              }
-                <div className="carousel-text">
-                  <p>{allPosts[index].title}</p>
-                  <p>{allPosts[index].description}</p>
+              <div key={post._id}>
+                <div className="carousel-content">  
+                {allPosts[index].imageUrl && ( 
+                  <img src={allPosts[index].imageUrl} alt={allPosts[index].title} className="carousel-image"/>
+                  )
+                }
+                  <div className="carousel-text">
+                    <p>{allPosts[index].title}</p>
+                    <p>{allPosts[index].description}</p>
+                  </div>
+                </div>  
+                <div className="carousel-footer">
+                  <p>L'ATC, le {formatDate(allPosts[index].timestamps)}</p>
                 </div>
-              </div>  
-              <div className="carousel-footer">
-                <p>L'ATC, le {formatDate(allPosts[index].timestamps)}</p>
-              </div>
             </div>
             )
           })}  

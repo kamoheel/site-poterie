@@ -55,7 +55,7 @@ const Home = () => {
                         <p>Cours Ados</p>
                     </NavLink>
                     <NavLink 
-                        to="/cours-de-poterie-ceramique-enfantss"
+                        to="/cours-de-poterie-ceramique-enfants"
                         className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
                     >
                         <img src={KidPot} alt="Petit pot dessiné" />

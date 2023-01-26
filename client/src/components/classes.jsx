@@ -37,7 +37,7 @@ const Classes = ({ publicConcerned, hoursChantal, hoursMarieAnge, hoursPepita, h
                         <tbody>
                             {prices.map((price) => {
                                 return (
-                                    <tr>
+                                    <tr key={price.title}>
                                         <td>{price.title}</td>
                                         {price.price && <td>{price.price}</td>}
                                         {price.priceFirstChild && <td>{price.priceFirstChild}</td>}

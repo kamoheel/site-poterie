@@ -11,6 +11,7 @@ import AdultClasses from './pages/adultClasses';
 import TeenClasses from './pages/teenClasses';
 import KidClasses from './pages/kidClasses';
 import Blog from './pages/blog';
+import Contact from './pages/contact';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Route exact path="/cours-de-poterie-ceramique-adolescents" element={<TeenClasses />} />
                 <Route exact path="/cours-de-poterie-ceramique-enfants" element={<KidClasses />} />
                 <Route exact path="/actus-atc" element={<Blog />} />
+                <Route exact path="/contact" element={<Contact />} />
                {/*  <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/about" element={<About />} />*/}
                 <Route path="/mentions-legales" element={<PrivacyPolicy />} />
