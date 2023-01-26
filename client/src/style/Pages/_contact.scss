@@ -32,13 +32,15 @@
     }
     .send-button {
         background-color: $color-tertiary;
-        color: $dark;
+        color: $color-secondary-very-light;
         padding: .5em;
-        font-family: "Anton", sans-serif;
-        font-size: 1.5em;
+        font-family: "Bubbler One", sans-serif;
+        font-size: 1.7em;
+        font-weight: 600;
         cursor: pointer;
         &:hover {
             background-color: $color-secondary;
+            color: $dark;
         }
     }
     @include mobile-tablet {

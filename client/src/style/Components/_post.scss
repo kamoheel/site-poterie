@@ -1,13 +1,49 @@
 .post{
     width: 80%;
-    margin:auto;
+    margin:1em auto;
     border: .1em solid $color-secondary;
     border-radius: .5em;
     padding: 1em;
+    position: relative;
+    .post-header {
+        display: flex;
+        justify-content: space-between;
+        .post-editing-link {
+            font-size: 1em;
+            background-color: $color-tertiary;
+            color: $color-secondary-very-light;
+            border-radius: .5em;
+            margin: .5em;
+            display: flex;
+            align-items: center;
+            .fa-icon{
+                margin-right: .5em;
+            }
+        &:hover {
+            background-color: $color-secondary;
+            color: $dark;
+        }
+        }
+    }
+    .post-body {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        .post-image-container{
+            width: 100%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        
+    }
     .post-footer{
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        font-size: .8em;
+        padding-top: .5em;
         img {
             width: 3%;
         }

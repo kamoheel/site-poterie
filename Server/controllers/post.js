@@ -38,7 +38,7 @@ exports.modifyPost = (req, res, next) => {
     delete postObject._userId;
     Post.findOne({_id: req.params.id})
         .then((post) => {
-            if (req.auth.isAdmin || post.userId === req.auth.userId) {
+            if (post.userId === req.auth.userId) {
                 if(req.file) {
                     //delete previous image if a file(img) was added
                     const filename = post.imageUrl.split('/images/')[1];
@@ -65,7 +65,7 @@ exports.modifyPost = (req, res, next) => {
 exports.deletePost = (req, res, next) => {
     Post.findOne({ _id: req.params.id })
         .then(post => {
-            if (req.auth.isAdmin || post.userId === req.auth.userId) {
+            if (post.userId === req.auth.userId) {
                 if(!post.imageUrl) {
                     Post.deleteOne({ _id: req.params.id })
                         .then(() => res.status(200).json({ message: 'Post supprimé !'}))
