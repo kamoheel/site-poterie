@@ -33,7 +33,7 @@ const Home = () => {
 
     return ( 
     <section id="home">
-        <h1>ATC - Cours de poterie à Carbonne</h1>
+        <h1>Cours de poterie à Carbonne</h1>
         <div id="home-presentation">
         <div className="home-text">
                 <p>L'Atelier Terre de Carbonne propose le travail de l'argile sous toutes ses formes: <span className="strong">sculptures</span>, <span className="strong">poteries</span>, <span className="strong">modelages</span> et <span className="strong">céramiques</span>. < br/>

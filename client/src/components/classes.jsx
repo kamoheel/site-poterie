@@ -1,7 +1,7 @@
 const Classes = ({ publicConcerned, hoursChantal, hoursMarieAnge, hoursPepita, hoursAudrey, prices}) => {
     const displayHours = (hours, teacher) => {
         return (
-            <div>
+            <div className="hours-by-teacher">
             <h2>Cours assurés par {teacher}</h2>
             {hours.map((setOfHours)=> {
                 return (
@@ -21,8 +21,8 @@ const Classes = ({ publicConcerned, hoursChantal, hoursMarieAnge, hoursPepita, h
             <h1>Cours {publicConcerned}</h1>
             <div className="classes-container">
                 <article className="hours">
-                    {hoursMarieAnge && <div>{displayHours(hoursMarieAnge, "Marie-Ange")}</div>}
                     {hoursChantal &&<div>{displayHours(hoursChantal, "Chantal")}</div>}
+                    {hoursMarieAnge && <div>{displayHours(hoursMarieAnge, "Marie-Ange")}</div>}
                     {hoursPepita && <div>{displayHours(hoursPepita, "Pepita")}</div>}
                     {hoursAudrey && <div>{displayHours(hoursAudrey, "Audrey")}</div>}
                 </article>

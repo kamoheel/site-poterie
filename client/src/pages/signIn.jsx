@@ -35,7 +35,7 @@ const SignIn = () => {
     return ( 
     <section id="signin">
         <div className="form-container">
-            <h2 className='form-container--title'>Connexion</h2>
+            <h2 className='signin-title'>Connexion</h2>
             <form className='form' onSubmit={handleLogin}>
                     <label className='form--label' htmlFor='email'> E-mail : <br />
                         <input 
@@ -65,7 +65,7 @@ const SignIn = () => {
                     </label>
                     <div className='password error'></div>
                     <br />
-                    <button className='form--btn' type="submit">
+                    <button className='send-button' type="submit">
                         Se connecter
                     </button>
             </form>

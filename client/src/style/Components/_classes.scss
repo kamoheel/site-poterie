@@ -1,13 +1,18 @@
 .classes-container{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .hours{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
     flex-basis: 50%;
+}
+.hours-by-teacher {
+    margin-right: 1.5em;
 }
 
 .prices {
@@ -18,5 +23,8 @@
             border: .1em solid $color-primary;
             padding: .2em;
         }
+    }
+    a {
+        padding: 0;
     }
 }

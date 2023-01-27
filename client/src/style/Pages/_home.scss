@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     h1 {
-        margin: auto;
+        align-self: flex-start;
     }
 }
 #home-presentation {
@@ -20,6 +20,9 @@
         img {
             width: 30%;
         }
+        .home-text {
+            width: 100%;
+        }
     }
 }
 .classes-links{
@@ -33,6 +36,7 @@
         align-items: center;
         border-radius: 1em;
         border: .1em solid $color-secondary;
+        min-height: 3em;
         img {
             max-height: 2em;
             width: 30%;

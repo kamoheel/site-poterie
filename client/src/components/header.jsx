@@ -68,7 +68,7 @@ const Header = () => {
                 <li className="hover-classes">
                 <button  
                     onMouseEnter={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
-                    // onMouseOut={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
+                    //onMouseOut={() => {setIsSubMenuExpanded(!isSubMenuExpanded)}}
                     className="link"
                 > 
                         Cours

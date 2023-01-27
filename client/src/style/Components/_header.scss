@@ -1,16 +1,19 @@
 header {
-    padding: 2em 2em;
+    padding: 1em 1em;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     // background-color: $color-secondary-lighter;
     margin-bottom: 1rem;
     border-bottom: .1em solid $color-tertiary;
     margin: 1em 5em;
     @include mobile-tablet () {
+        flex-direction: row;
         padding: 0 1em;
     }
     .title {
+        padding-bottom: 1em;
         @include mobile-tablet () {
             font-size: 35px;
             display: flex;
@@ -19,7 +22,7 @@ header {
     }
 
     nav {
-        width: 40%;
+        margin: auto;
         display: flex;
         align-items: flex-start;
         @include mobile-tablet () {
@@ -31,7 +34,7 @@ header {
         display: flex;
                 flex-direction: column;
                 background-color: $color-secondary-lighter;
-                padding: 1em;
+                // padding: 1em;
                 li {
                     padding: .2em 0;
                 }

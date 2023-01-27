@@ -20,7 +20,7 @@ const Post = ({ post, title, description, imageUrl, date, isLoggedIn, fetchAllPo
         description: null
     });
     const formatDate = (dateString) => {
-        const options = { year: "numeric", month: "long", day: "numeric", hour: 'numeric', minute: 'numeric' }
+        const options = { year: "numeric", month: "long", day: "numeric"}
         return new Date(dateString).toLocaleDateString('fr-FR', options)
     }
 
@@ -90,37 +90,39 @@ const Post = ({ post, title, description, imageUrl, date, isLoggedIn, fetchAllPo
 
     return ( 
     <article className="post">
-        <div className="post-header">
-        <h2>{title}</h2>
-        {isLoggedIn && 
-        <div className="post-editing">
-            <Link
-                className="post-editing-link"
-                onClick={() => handleEdit(post._id, title, description)}
-            >
-                <FontAwesomeIcon icon={faPenToSquare} className='fa-icon'/>
-                <p>Modifier</p>
-            </Link>
-            <Link
-                className="post-editing-link"
-                onClick={() => handleDelete(post._id)}
-            >
-            <FontAwesomeIcon icon={faTrash} className='fa-icon'/>
-            <p>Supprimer</p>
-            </Link>
-        </div>}
-        </div>
         <div className="post-body">
+            <div className="post-header">
+                <h2 className="post-text">{title}</h2>
+                {isLoggedIn && 
+                <div className="post-editing">
+                    <Link
+                        className="post-editing-link"
+                        onClick={() => handleEdit(post._id, title, description)}
+                    >
+                        <FontAwesomeIcon icon={faPenToSquare} className='fa-icon'/>
+                        <p>Modifier</p>
+                    </Link>
+                    <Link
+                        className="post-editing-link"
+                        onClick={() => handleDelete(post._id)}
+                    >
+                    <FontAwesomeIcon icon={faTrash} className='fa-icon'/>
+                    <p>Supprimer</p>
+                    </Link>
+                </div>}
+            </div>
+            <p className='post-description post-text'>{description}</p>
+        </div>
+        <div className="post-image">
             {post.imageUrl && (
-                <div className="post-image-container">
                     <img className='post-image' src={imageUrl} alt={title}/>
-                </div>
             )}
-            <p className='post-description'>{description}</p>
+            
         </div>
         <div className="post-footer">
-        <img src={SmallPot} alt='Dessin de petit pot' />
-        <p> ATC, le {formatDate(date)}</p>
+            {/* <img src={SmallPot} alt='Dessin de petit pot' /> */}
+            <p> ATC, le {formatDate(date)}</p>
+        </div>
         {editPopUp.show && (
                     <EditPopUp 
                     postId={editPopUp.id}
@@ -137,7 +139,7 @@ const Post = ({ post, title, description, imageUrl, date, isLoggedIn, fetchAllPo
                     post={post}
                     />
                 )}
-        </div>
+        
 
         
     </article> );

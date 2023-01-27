@@ -82,6 +82,7 @@ footer {
         text-align: center;
     }
     a {
+        padding: 0;
         color: $color-tertiary;
         &:visited {
             color:$color-primary;
