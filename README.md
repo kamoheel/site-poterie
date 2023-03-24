@@ -1,4 +1,4 @@
-# site-poterie
+# Ateliers de céramique - Argilement
 
 Ceci est un exemple de site réalisé sur mesure pour une association, avec une partie blog modifiable par un administrateur.
 
