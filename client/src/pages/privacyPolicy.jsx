@@ -1,6 +1,6 @@
 const PrivacyPolicy = () => {
     return ( <section id="privacy-policy">
-        <h1>Atelier Terre de Carbonne</h1>
+        <h1>Argilement</h1>
         <h2>MENTIONS LEGALES ET POLITIQUE DE CONFIDENTIALITE</h2>
         <br />
         <p>

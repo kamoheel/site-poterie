@@ -22,7 +22,7 @@ const Classes = ({ publicConcerned, hoursChantal, hoursMarieAnge, hoursPepita, h
             <div className="classes-container">
                 <article className="hours">
                     {hoursChantal &&<div>{displayHours(hoursChantal, "Chantal")}</div>}
-                    {hoursMarieAnge && <div>{displayHours(hoursMarieAnge, "Marie-Ange")}</div>}
+                    {hoursMarieAnge && <div>{displayHours(hoursMarieAnge, "Marie")}</div>}
                     {hoursPepita && <div>{displayHours(hoursPepita, "Pepita")}</div>}
                     {hoursAudrey && <div>{displayHours(hoursAudrey, "Audrey")}</div>}
                 </article>
@@ -47,9 +47,9 @@ const Classes = ({ publicConcerned, hoursChantal, hoursMarieAnge, hoursPepita, h
                             })}
                         </tbody>
                     </table>
-                    {publicConcerned === "Adultes" && (<div><h3>Réduction</h3><p>La mairie de Carbonne propose une Carte Loisirs Séniors qui donne droit à une prise en charge d'une partie de l'inscription, <a href="https://www.ville-carbonne.fr/La-Carte-Loisirs-Seniors.html" target="_blank" rel="noreferrer">cliquez ici pour plus d'information.</a></p></div>)}
+                    {/* {publicConcerned === "Adultes" && (<div><h3>Réduction</h3><p>La mairie de Carbonne propose une Carte Loisirs Séniors qui donne droit à une prise en charge d'une partie de l'inscription, <a href="https://www.ville-carbonne.fr/La-Carte-Loisirs-Seniors.html" target="_blank" rel="noreferrer">cliquez ici pour plus d'information.</a></p></div>)}
 
-                    {(publicConcerned === "Enfants" || publicConcerned === "Adolescents") && <div><h3>Réduction</h3><p>Il existe une Carte Loisirs Jeunes via la mairie de Carbonne qui donne droit, selon les ressources du foyer, à une réduction sur la cotisation, <a href="https://www.ville-carbonne.fr/Carte-Loisirs-Jeunes.html" target="_blank" rel="noreferrer">cliquez ici pour plus d'information</a></p></div>}
+                    {(publicConcerned === "Enfants" || publicConcerned === "Adolescents") && <div><h3>Réduction</h3><p>Il existe une Carte Loisirs Jeunes via la mairie de Carbonne qui donne droit, selon les ressources du foyer, à une réduction sur la cotisation, <a href="https://www.ville-carbonne.fr/Carte-Loisirs-Jeunes.html" target="_blank" rel="noreferrer">cliquez ici pour plus d'information</a></p></div>} */}
                 </article>
             </div>
         </section>

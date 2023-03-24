@@ -73,7 +73,7 @@ const Contact = () => {
       <p className={sendingError ? "error-message" : "hidden"}>Une erreur est survenue, veuillez réessayer ou bien nous envoyer directement un mail à <a href="mailto:atelier.terre.carbonne22@gmail.com">atelier.terre.carbonne22@gmail.com</a>.</p>
       <h2>Contactez-nous</h2>
       
-      <p>Vous pouvez nous envoyer un email à <a href="mailto:atelier.terre.carbonne22@gmail.com">atelier.terre.carbonne22@gmail.com</a> ou remplir ce formulaire de contact:</p>
+      <p>Vous pouvez nous envoyer un email à <a href="mailto:argilement@dotmail.com">argilement@dotmail.com</a> ou remplir ce formulaire de contact:</p>
       
       <form className="form" ref={form} onSubmit={handleSendForm}>
         <label htmlFor="username">Nom</label>

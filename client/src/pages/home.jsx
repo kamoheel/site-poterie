@@ -33,10 +33,10 @@ const Home = () => {
 
     return ( 
     <section id="home">
-        <h1>Cours de poterie à Carbonne</h1>
+        <h1>Cours de poterie</h1>
         <div id="home-presentation">
         <div className="home-text">
-                <p>L'Atelier Terre de Carbonne propose le travail de l'argile sous toutes ses formes: <span className="strong">sculptures</span>, <span className="strong">poteries</span>, <span className="strong">modelages</span> et <span className="strong">céramiques</span>. < br/>
+                <p>L'Atelier Céramique Argilement propose le travail de l'argile sous toutes ses formes: <span className="strong">sculptures</span>, <span className="strong">poteries</span>, <span className="strong">modelages</span> et <span className="strong">céramiques</span>. < br/>
                 Les cours sont destinés aux adultes, adolescents et enfants.</p>
                 <h2>Les cours en détail:</h2>
                 <div className='classes-links'>
@@ -67,7 +67,7 @@ const Home = () => {
             
         </div>
         <div id="home-blog">
-            <h2>Dernières actus de l'Atelier Terre</h2>
+            <h2>Dernières actus de l'atelier</h2>
             <Carousel allPosts={allPosts} />
         </div>
     </section> 

@@ -121,7 +121,7 @@ const Post = ({ post, title, description, imageUrl, date, isLoggedIn, fetchAllPo
         </div>
         <div className="post-footer">
             {/* <img src={SmallPot} alt='Dessin de petit pot' /> */}
-            <p> ATC, le {formatDate(date)}</p>
+            <p> Argilement, le {formatDate(date)}</p>
         </div>
         {editPopUp.show && (
                     <EditPopUp 

@@ -48,7 +48,7 @@ const Carousel = ( {allPosts} ) => {
                     <div className="carousel-text">
                       <p>{post.title}</p>
                       <p>{post.description}</p>
-                      <p className="carousel-footer">Publié par l'ATC, le {formatDate(allPosts[index].timestamps)}</p>
+                      {/* <p className="carousel-footer">Publié par l'ATC, le {formatDate(allPosts[index].timestamps)}</p> */}
                     </div>
                     {/* <div >
                     

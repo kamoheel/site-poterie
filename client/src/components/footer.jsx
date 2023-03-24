@@ -77,19 +77,20 @@ const Footer = () => {
             <li>
                 <FontAwesomeIcon icon={faLocationDot} className="fa fa-location" />
                 <p>
-                                Atelier Terre <br />
-                                31390 Carbonne 
+                                Argilement <br />
+                                Rue de la Terre <br />
+                                12345 Ville
                 </p>
             </li>
             <div className="contact-divider"></div>
             <li>
                 <FontAwesomeIcon icon={faEnvelope} className="fa fa-envelope" />
-                <a href="mailto:atelier.terre.carbonne22@gmail.com">atelier.terre.carbonne22@gmail.com</a>
+                <a href="mailto:atelier.terre.carbonne22@gmail.com">argilement@dotmail.com</a>
             </li>
             </ul>
       </div>
             <div id='footer-bottom'>  
-                <p>Copyright © 2023 Atelier Terre de Carbonne | Tous droits réservés | <NavLink to="/mentions-legales"> Mentions légales</NavLink></p>
+                <p>Copyright © 2023 Argilement | Tous droits réservés | <NavLink to="/mentions-legales"> Mentions légales</NavLink></p>
                 <p>Site web créé et développé par <a href="https://www.camilleherpin.com" target="_blank" rel="noreferrer">Camille Herpin</a></p>    
             </div>
         </footer>

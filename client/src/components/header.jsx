@@ -51,7 +51,7 @@ const Header = () => {
         
     return ( 
         <header>
-        <div className="allcaps title">ATC - Atelier Terre de Carbonne</div>
+        <div className="allcaps title">Argilement - Atelier de céramique</div>
         <nav>
             <button className="menu" onClick={() => {setIsNavExpanded(!isNavExpanded)}} aria-label="Menu Button">
                 <FontAwesomeIcon icon={faBars} className="fa fa-menu" />

@@ -26,3 +26,5 @@
 /client/yarn-error.log*
 
 /client/.env
+
+/client/src/pages/privacyPolicy.jsx

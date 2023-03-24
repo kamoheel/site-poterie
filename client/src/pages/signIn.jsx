@@ -43,7 +43,7 @@ const SignIn = () => {
                             type="email" 
                             id="email" 
                             label="email" 
-                            placeholder="exemple@groupomania.fr"
+                            placeholder="exemple@provider.fr"
                             onChange={(e) => setEmail(e.target.value)}
                             value={email} 
                         /> 
